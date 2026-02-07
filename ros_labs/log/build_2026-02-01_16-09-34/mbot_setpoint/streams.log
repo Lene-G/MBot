@@ -1,0 +1,31 @@
+[0.017s] Invoking command in '/home/mbot/mbot_ros_labs/build/mbot_setpoint': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mbot/mbot_ws/install/mbot_vision:/home/mbot/mbot_ws/install/mbot_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mbot/mbot_ros_labs/build/mbot_setpoint -- -j4 -l4
+[0.155s] [ 16%] [32mBuilding CXX object CMakeFiles/square_publisher.dir/src/square_publisher.cpp.o[0m
+[0.173s] [ 50%] Built target odom
+[0.180s] [ 83%] Built target motion_controller_diff
+[7.324s] [100%] [32m[1mLinking CXX executable square_publisher[0m
+[7.702s] [100%] Built target square_publisher
+[7.728s] Invoked command in '/home/mbot/mbot_ros_labs/build/mbot_setpoint' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mbot/mbot_ws/install/mbot_vision:/home/mbot/mbot_ws/install/mbot_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mbot/mbot_ros_labs/build/mbot_setpoint -- -j4 -l4
+[7.749s] Invoking command in '/home/mbot/mbot_ros_labs/build/mbot_setpoint': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mbot/mbot_ws/install/mbot_vision:/home/mbot/mbot_ws/install/mbot_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mbot/mbot_ros_labs/build/mbot_setpoint
+[7.766s] -- Install configuration: ""
+[7.767s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/lib/mbot_setpoint/motion_controller_diff
+[7.782s] -- Set non-toolchain portion of runtime path of "/home/mbot/mbot_ros_labs/install/mbot_setpoint/lib/mbot_setpoint/motion_controller_diff" to ""
+[7.782s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/lib/mbot_setpoint/square_publisher
+[7.785s] -- Set non-toolchain portion of runtime path of "/home/mbot/mbot_ros_labs/install/mbot_setpoint/lib/mbot_setpoint/square_publisher" to ""
+[7.786s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/lib/mbot_setpoint/odom
+[7.796s] -- Set non-toolchain portion of runtime path of "/home/mbot/mbot_ros_labs/install/mbot_setpoint/lib/mbot_setpoint/odom" to ""
+[7.796s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/ament_index/resource_index/package_run_dependencies/mbot_setpoint
+[7.796s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/ament_index/resource_index/parent_prefix_path/mbot_setpoint
+[7.797s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/environment/ament_prefix_path.sh
+[7.797s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/environment/ament_prefix_path.dsv
+[7.797s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/environment/path.sh
+[7.797s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/environment/path.dsv
+[7.797s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/local_setup.bash
+[7.797s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/local_setup.sh
+[7.798s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/local_setup.zsh
+[7.798s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/local_setup.dsv
+[7.798s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/package.dsv
+[7.798s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/ament_index/resource_index/packages/mbot_setpoint
+[7.798s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/cmake/mbot_setpointConfig.cmake
+[7.799s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/cmake/mbot_setpointConfig-version.cmake
+[7.799s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/package.xml
+[7.802s] Invoked command in '/home/mbot/mbot_ros_labs/build/mbot_setpoint' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mbot/mbot_ws/install/mbot_vision:/home/mbot/mbot_ws/install/mbot_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mbot/mbot_ros_labs/build/mbot_setpoint

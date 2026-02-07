@@ -1,0 +1,27 @@
+[ 16%] [32mBuilding CXX object CMakeFiles/square_publisher.dir/src/square_publisher.cpp.o[0m
+[ 50%] Built target odom
+[ 83%] Built target motion_controller_diff
+[100%] [32m[1mLinking CXX executable square_publisher[0m
+[100%] Built target square_publisher
+-- Install configuration: ""
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/lib/mbot_setpoint/motion_controller_diff
+-- Set non-toolchain portion of runtime path of "/home/mbot/mbot_ros_labs/install/mbot_setpoint/lib/mbot_setpoint/motion_controller_diff" to ""
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/lib/mbot_setpoint/square_publisher
+-- Set non-toolchain portion of runtime path of "/home/mbot/mbot_ros_labs/install/mbot_setpoint/lib/mbot_setpoint/square_publisher" to ""
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/lib/mbot_setpoint/odom
+-- Set non-toolchain portion of runtime path of "/home/mbot/mbot_ros_labs/install/mbot_setpoint/lib/mbot_setpoint/odom" to ""
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/ament_index/resource_index/package_run_dependencies/mbot_setpoint
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/ament_index/resource_index/parent_prefix_path/mbot_setpoint
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/environment/ament_prefix_path.sh
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/environment/ament_prefix_path.dsv
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/environment/path.sh
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/environment/path.dsv
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/local_setup.bash
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/local_setup.sh
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/local_setup.zsh
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/local_setup.dsv
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/package.dsv
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/ament_index/resource_index/packages/mbot_setpoint
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/cmake/mbot_setpointConfig.cmake
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/cmake/mbot_setpointConfig-version.cmake
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_setpoint/share/mbot_setpoint/package.xml

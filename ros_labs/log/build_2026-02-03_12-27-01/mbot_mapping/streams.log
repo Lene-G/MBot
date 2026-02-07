@@ -1,0 +1,43 @@
+[0.025s] Invoking command in '/home/mbot/mbot_ros_labs/build/mbot_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mbot/mbot_ws/install/mbot_vision:/home/mbot/mbot_ws/install/mbot_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mbot/mbot_ros_labs/build/mbot_mapping -- -j4 -l4
+[0.411s] [ 20%] [32mBuilding CXX object CMakeFiles/moving_laser_scan.dir/src/moving_laser_scan.cpp.o[0m
+[5.888s] [ 40%] [32m[1mLinking CXX static library libmoving_laser_scan.a[0m
+[6.773s] [ 40%] Built target moving_laser_scan
+[6.887s] [ 60%] [32mBuilding CXX object CMakeFiles/mapping_node.dir/src/mapping.cpp.o[0m
+[7.497s] [ 80%] [32m[1mLinking CXX executable mapping_node[0m
+[9.025s] [100%] Built target mapping_node
+[9.049s] Invoked command in '/home/mbot/mbot_ros_labs/build/mbot_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mbot/mbot_ws/install/mbot_vision:/home/mbot/mbot_ws/install/mbot_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mbot/mbot_ros_labs/build/mbot_mapping -- -j4 -l4
+[9.074s] Invoking command in '/home/mbot/mbot_ros_labs/build/mbot_mapping': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mbot/mbot_ws/install/mbot_vision:/home/mbot/mbot_ws/install/mbot_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mbot/mbot_ros_labs/build/mbot_mapping
+[9.092s] -- Install configuration: ""
+[9.092s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//launch
+[9.092s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//launch/mapping.launch.py
+[9.092s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//launch/view_map.launch.py
+[9.092s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//maps
+[9.093s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//maps/.placeholder
+[9.095s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/lib/mbot_mapping/mapping_node
+[9.107s] -- Set non-toolchain portion of runtime path of "/home/mbot/mbot_ros_labs/install/mbot_mapping/lib/mbot_mapping/mapping_node" to ""
+[9.107s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/lib/libmoving_laser_scan.a
+[9.108s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/include
+[9.108s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/include/moving_laser_scan.hpp
+[9.108s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/include/mapping.hpp
+[9.108s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/library_path.sh
+[9.108s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/library_path.dsv
+[9.108s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/ament_index/resource_index/package_run_dependencies/mbot_mapping
+[9.108s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/ament_index/resource_index/parent_prefix_path/mbot_mapping
+[9.109s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/ament_prefix_path.sh
+[9.109s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/ament_prefix_path.dsv
+[9.109s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/path.sh
+[9.109s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/path.dsv
+[9.109s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/local_setup.bash
+[9.109s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/local_setup.sh
+[9.109s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/local_setup.zsh
+[9.109s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/local_setup.dsv
+[9.109s] -- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/package.dsv
+[9.109s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/ament_index/resource_index/packages/mbot_mapping
+[9.110s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/moving_laser_scanTargetsExport.cmake
+[9.110s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/moving_laser_scanTargetsExport-noconfig.cmake
+[9.110s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/ament_cmake_export_targets-extras.cmake
+[9.110s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/ament_cmake_export_include_directories-extras.cmake
+[9.110s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/mbot_mappingConfig.cmake
+[9.111s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/mbot_mappingConfig-version.cmake
+[9.111s] -- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/package.xml
+[9.114s] Invoked command in '/home/mbot/mbot_ros_labs/build/mbot_mapping' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mbot/mbot_ws/install/mbot_vision:/home/mbot/mbot_ws/install/mbot_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/mbot/mbot_ros_labs/build/mbot_mapping

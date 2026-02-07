@@ -1,0 +1,39 @@
+[ 20%] [32mBuilding CXX object CMakeFiles/moving_laser_scan.dir/src/moving_laser_scan.cpp.o[0m
+[ 40%] [32m[1mLinking CXX static library libmoving_laser_scan.a[0m
+[ 40%] Built target moving_laser_scan
+[ 60%] [32mBuilding CXX object CMakeFiles/mapping_node.dir/src/mapping.cpp.o[0m
+[ 80%] [32m[1mLinking CXX executable mapping_node[0m
+[100%] Built target mapping_node
+-- Install configuration: ""
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//launch
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//launch/mapping.launch.py
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//launch/view_map.launch.py
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//maps
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//maps/.placeholder
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/lib/mbot_mapping/mapping_node
+-- Set non-toolchain portion of runtime path of "/home/mbot/mbot_ros_labs/install/mbot_mapping/lib/mbot_mapping/mapping_node" to ""
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/lib/libmoving_laser_scan.a
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/include
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/include/moving_laser_scan.hpp
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/include/mapping.hpp
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/library_path.sh
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/library_path.dsv
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/ament_index/resource_index/package_run_dependencies/mbot_mapping
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/ament_index/resource_index/parent_prefix_path/mbot_mapping
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/ament_prefix_path.sh
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/path.sh
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/path.dsv
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/local_setup.bash
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/local_setup.sh
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/local_setup.zsh
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/local_setup.dsv
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/package.dsv
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/ament_index/resource_index/packages/mbot_mapping
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/moving_laser_scanTargetsExport.cmake
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/moving_laser_scanTargetsExport-noconfig.cmake
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/ament_cmake_export_targets-extras.cmake
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/mbot_mappingConfig.cmake
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/mbot_mappingConfig-version.cmake
+-- Up-to-date: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/package.xml

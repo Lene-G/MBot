@@ -1,0 +1,82 @@
+[0.024s] Invoking command in '/home/mbot/mbot_ros_labs/build/mbot_setpoint': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mbot/mbot_ws/install/mbot_vision:/home/mbot/mbot_ws/install/mbot_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mbot/mbot_ros_labs/mbot_labs_ws/mbot_setpoint -DCMAKE_INSTALL_PREFIX=/home/mbot/mbot_ros_labs/install/mbot_setpoint
+[0.519s] -- The C compiler identification is GNU 13.3.0
+[0.888s] -- The CXX compiler identification is GNU 13.3.0
+[0.930s] -- Detecting C compiler ABI info
+[1.143s] -- Detecting C compiler ABI info - done
+[1.159s] -- Check for working C compiler: /usr/bin/cc - skipped
+[1.160s] -- Detecting C compile features
+[1.162s] -- Detecting C compile features - done
+[1.179s] -- Detecting CXX compiler ABI info
+[1.379s] -- Detecting CXX compiler ABI info - done
+[1.396s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.397s] -- Detecting CXX compile features
+[1.397s] -- Detecting CXX compile features - done
+[1.413s] -- Found ament_cmake: 2.5.4 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.686s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.953s] -- Found rclcpp: 28.1.10 (/opt/ros/jazzy/share/rclcpp/cmake)
+[2.078s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[2.117s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[2.164s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[2.214s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.404s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[2.416s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[2.636s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[2.673s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[2.713s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.962s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[3.087s] -- Found visualization_msgs: 5.3.6 (/opt/ros/jazzy/share/visualization_msgs/cmake)
+[3.189s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[3.239s] -- Found tf2: 0.36.12 (/opt/ros/jazzy/share/tf2/cmake)
+[3.253s] -- Found tf2_msgs: 0.36.12 (/opt/ros/jazzy/share/tf2_msgs/cmake)
+[3.370s] -- Found tf2_geometry_msgs: 0.36.12 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[3.417s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[3.420s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[3.420s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[3.585s] -- Found mbot_interfaces: 0.0.0 (/home/mbot/mbot_ws/install/mbot_interfaces/share/mbot_interfaces/cmake)
+[3.790s] -- Configuring done (3.6s)
+[3.834s] -- Generating done (0.0s)
+[3.846s] -- Build files have been written to: /home/mbot/mbot_ros_labs/build/mbot_setpoint
+[3.871s] Invoked command in '/home/mbot/mbot_ros_labs/build/mbot_setpoint' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mbot/mbot_ws/install/mbot_vision:/home/mbot/mbot_ws/install/mbot_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/mbot/mbot_ros_labs/mbot_labs_ws/mbot_setpoint -DCMAKE_INSTALL_PREFIX=/home/mbot/mbot_ros_labs/install/mbot_setpoint
+[3.874s] Invoking command in '/home/mbot/mbot_ros_labs/build/mbot_setpoint': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mbot/mbot_ws/install/mbot_vision:/home/mbot/mbot_ws/install/mbot_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mbot/mbot_ros_labs/build/mbot_setpoint -- -j4 -l4
+[3.982s] [ 50%] [32mBuilding CXX object CMakeFiles/odom.dir/src/odom.cpp.o[0m
+[3.982s] [ 50%] [32mBuilding CXX object CMakeFiles/motion_controller_diff.dir/src/motion_controller_diff.cpp.o[0m
+[3.983s] [ 50%] [32mBuilding CXX object CMakeFiles/square_publisher.dir/src/square_publisher.cpp.o[0m
+[8.545s] [01m[K/home/mbot/mbot_ros_labs/mbot_labs_ws/mbot_setpoint/src/square_publisher.cpp:[m[K In lambda function:
+[8.545s] [01m[K/home/mbot/mbot_ros_labs/mbot_labs_ws/mbot_setpoint/src/square_publisher.cpp:30:43:[m[K [01;31m[Kerror: [m[K‘[01m[KEXTRA[m[K’ was not declared in this scope
+[8.545s]    30 |                     pose(0.61, -0.61, 0 + [01;31m[KEXTRA[m[K),           //rotate right
+[8.545s]       |                                           [01;31m[K^~~~~[m[K
+[8.547s] [01m[K/home/mbot/mbot_ros_labs/mbot_labs_ws/mbot_setpoint/src/square_publisher.cpp:53:17:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kmbot_interfaces::msg::Pose2DArray_<std::allocator<void> >::_poses_type[m[K’ {aka ‘[01m[Kstd::vector<geometry_msgs::msg::Pose2D_<std::allocator<void> >, std::allocator<geometry_msgs::msg::Pose2D_<std::allocator<void> > > >[m[K’} and ‘[01m[K<brace-enclosed initializer list>[m[K’)
+[8.547s]    53 |                 [01;31m[K}[m[K;
+[8.547s]       |                 [01;31m[K^[m[K
+[8.547s] In file included from [01m[K/usr/include/c++/13/vector:72[m[K,
+[8.548s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/copy_all_parameter_values.hpp:19[m[K,
+[8.548s]                  from [01m[K/opt/ros/jazzy/include/rclcpp/rclcpp/rclcpp.hpp:171[m[K,
+[8.548s]                  from [01m[K/home/mbot/mbot_ros_labs/mbot_labs_ws/mbot_setpoint/src/square_publisher.cpp:2[m[K:
+[8.548s] [01m[K/usr/include/c++/13/bits/vector.tcc:210:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::[01;32m[Koperator=[m[K(const std::vector<_Tp, _Alloc>&) [35m[K[with _Tp = geometry_msgs::msg::Pose2D_<std::allocator<void> >; _Alloc = std::allocator<geometry_msgs::msg::Pose2D_<std::allocator<void> > >][m[K[m[K’
+[8.548s]   210 |     [01;36m[Kvector<_Tp, _Alloc>[m[K::
+[8.549s]       |     [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[8.549s] [01m[K/usr/include/c++/13/bits/vector.tcc:211:42:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst std::vector<geometry_msgs::msg::Pose2D_<std::allocator<void> >, std::allocator<geometry_msgs::msg::Pose2D_<std::allocator<void> > > >&[m[K’
+[8.549s]   211 |     operator=([01;36m[Kconst vector<_Tp, _Alloc>& __x[m[K)
+[8.549s]       |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[8.549s] In file included from [01m[K/usr/include/c++/13/vector:66[m[K:
+[8.549s] [01m[K/usr/include/c++/13/bits/stl_vector.h:766:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::[01;32m[Koperator=[m[K(std::vector<_Tp, _Alloc>&&) [35m[K[with _Tp = geometry_msgs::msg::Pose2D_<std::allocator<void> >; _Alloc = std::allocator<geometry_msgs::msg::Pose2D_<std::allocator<void> > >][m[K[m[K’
+[8.549s]   766 |       [01;36m[Koperator[m[K=(vector&& __x) noexcept(_Alloc_traits::_S_nothrow_move())
+[8.549s]       |       [01;36m[K^~~~~~~~[m[K
+[8.550s] [01m[K/usr/include/c++/13/bits/stl_vector.h:766:26:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::vector<geometry_msgs::msg::Pose2D_<std::allocator<void> >, std::allocator<geometry_msgs::msg::Pose2D_<std::allocator<void> > > >&&[m[K’
+[8.550s]   766 |       operator=([01;36m[Kvector&& __x[m[K) noexcept(_Alloc_traits::_S_nothrow_move())
+[8.550s]       |                 [01;36m[K~~~~~~~~~^~~[m[K
+[8.550s] [01m[K/usr/include/c++/13/bits/stl_vector.h:788:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::[01;32m[Koperator=[m[K(std::initializer_list<_Tp>) [35m[K[with _Tp = geometry_msgs::msg::Pose2D_<std::allocator<void> >; _Alloc = std::allocator<geometry_msgs::msg::Pose2D_<std::allocator<void> > >][m[K[m[K’
+[8.550s]   788 |       [01;36m[Koperator[m[K=(initializer_list<value_type> __l)
+[8.550s]       |       [01;36m[K^~~~~~~~[m[K
+[8.550s] [01m[K/usr/include/c++/13/bits/stl_vector.h:788:46:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::initializer_list<geometry_msgs::msg::Pose2D_<std::allocator<void> > >[m[K’
+[8.551s]   788 |       operator=([01;36m[Kinitializer_list<value_type> __l[m[K)
+[8.551s]       |                 [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[10.432s] gmake[2]: *** [CMakeFiles/square_publisher.dir/build.make:76: CMakeFiles/square_publisher.dir/src/square_publisher.cpp.o] Error 1
+[10.433s] gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/square_publisher.dir/all] Error 2
+[10.433s] gmake[1]: *** Waiting for unfinished jobs....
+[20.231s] [ 66%] [32m[1mLinking CXX executable odom[0m
+[21.513s] [ 66%] Built target odom
+[25.315s] [ 83%] [32m[1mLinking CXX executable motion_controller_diff[0m
+[26.721s] [ 83%] Built target motion_controller_diff
+[26.723s] gmake: *** [Makefile:146: all] Error 2
+[26.727s] Invoked command in '/home/mbot/mbot_ros_labs/build/mbot_setpoint' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/mbot/mbot_ws/install/mbot_vision:/home/mbot/mbot_ws/install/mbot_bringup:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/mbot/mbot_ros_labs/build/mbot_setpoint -- -j4 -l4

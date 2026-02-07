@@ -1,0 +1,18 @@
+[ 40%] Built target moving_laser_scan
+[ 60%] [32mBuilding CXX object CMakeFiles/mapping_node.dir/src/mapping_node.cpp.o[0m
+[01m[K/home/mbot/mbot_ros_labs/mbot_labs_ws/mbot_mapping/src/mapping_node.cpp:[m[K In member function ‘[01m[Kvoid MappingNode::[01;32m[KupdateGrid[m[K(const MovingLaserScan&)[m[K’:
+[01m[K/home/mbot/mbot_ros_labs/mbot_labs_ws/mbot_mapping/src/mapping_node.cpp:140:53:[m[K [01;31m[Kerror: [m[K‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<std::pair<int, int> >, std::pair<int, int> >::value_type[m[K’ {aka ‘[01m[Kstruct std::pair<int, int>[m[K’} has no member named ‘[01m[Kx[m[K’
+  140 |                  grid_.markCellFree(ray_cells[i].[01;31m[Kx[m[K, ray_cells[i].y);
+      |                                                  [01;31m[K^[m[K
+
+[01m[K/home/mbot/mbot_ros_labs/mbot_labs_ws/mbot_mapping/src/mapping_node.cpp:140:69:[m[K [01;31m[Kerror: [m[K‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<std::pair<int, int> >, std::pair<int, int> >::value_type[m[K’ {aka ‘[01m[Kstruct std::pair<int, int>[m[K’} has no member named ‘[01m[Ky[m[K’
+  140 |          grid_.markCellFree(ray_cells[i].x, ray_cells[i].[01;31m[Ky[m[K);
+      |                                                          [01;31m[K^[m[K
+
+[01m[K/home/mbot/mbot_ros_labs/mbot_labs_ws/mbot_mapping/src/mapping_node.cpp:146:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kscan_msg_[m[K’ was not declared in this scope; did you mean ‘[01m[Kscan_sub_[m[K’?
+  146 |                 if (ray.range < [01;31m[Kscan_msg_[m[K->range_max) {
+      |                                 [01;31m[K^~~~~~~~~[m[K
+      |                                 [32m[Kscan_sub_[m[K
+gmake[2]: *** [CMakeFiles/mapping_node.dir/build.make:90: CMakeFiles/mapping_node.dir/src/mapping_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/mapping_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

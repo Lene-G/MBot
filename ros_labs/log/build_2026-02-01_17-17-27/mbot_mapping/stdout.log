@@ -1,0 +1,37 @@
+[ 40%] Built target moving_laser_scan
+[ 60%] [32mBuilding CXX object CMakeFiles/mapping_node.dir/src/mapping_node.cpp.o[0m
+[ 80%] [32m[1mLinking CXX executable mapping_node[0m
+[100%] Built target mapping_node
+-- Install configuration: ""
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//launch
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//launch/mapping.launch.py
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//launch/view_map.launch.py
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//maps
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping//maps/.placeholder
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/lib/mbot_mapping/mapping_node
+-- Set non-toolchain portion of runtime path of "/home/mbot/mbot_ros_labs/install/mbot_mapping/lib/mbot_mapping/mapping_node" to ""
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/lib/libmoving_laser_scan.a
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/include
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/include/moving_laser_scan.hpp
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/include/mapping.hpp
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/library_path.sh
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/library_path.dsv
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/ament_index/resource_index/package_run_dependencies/mbot_mapping
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/ament_index/resource_index/parent_prefix_path/mbot_mapping
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/ament_prefix_path.sh
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/ament_prefix_path.dsv
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/path.sh
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/environment/path.dsv
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/local_setup.bash
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/local_setup.sh
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/local_setup.zsh
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/local_setup.dsv
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/package.dsv
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/ament_index/resource_index/packages/mbot_mapping
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/moving_laser_scanTargetsExport.cmake
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/moving_laser_scanTargetsExport-noconfig.cmake
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/ament_cmake_export_targets-extras.cmake
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/mbot_mappingConfig.cmake
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/cmake/mbot_mappingConfig-version.cmake
+-- Installing: /home/mbot/mbot_ros_labs/install/mbot_mapping/share/mbot_mapping/package.xml
