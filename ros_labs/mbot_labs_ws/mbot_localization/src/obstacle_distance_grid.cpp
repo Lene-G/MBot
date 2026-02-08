@@ -67,9 +67,10 @@ void ObstacleDistanceGrid::computeDistances()
         GridCell current = queue.front();
         queue.pop();
 
-        int cx = current.x;
-        int cy = current.y;
-        int cidx = cy * width_ + cx;
+        const int cx = current.x;
+        const int cy = current.y;
+        const int cidx = cy * width_ + cx;
+        const float cur_dist = distances_[cidx];
 
         for (int i = 0; i < 8; ++i) {
             int nx = cx + dx[i];
@@ -77,12 +78,24 @@ void ObstacleDistanceGrid::computeDistances()
 
             if (!isCellInGrid(nx, ny)) continue;
 
-            int nidx = ny * width_ + nx;
+            const int nidx = ny * width_ + nx;
 
-            // Euclidean distance increment
-            float step_dist = std::sqrt(dx[i]*dx[i] + dy[i]*dy[i]) * resolution_;
-            float new_dist = distances_[cidx] + step_dist;
+            // // Euclidean distance increment
+            // float step_dist = std::sqrt(dx[i]*dx[i] + dy[i]*dy[i]) * resolution_;
+            // float new_dist = distances_[cidx] + step_dist;
 
+            // if (new_dist < distances_[nidx]) {
+            //     distances_[nidx] = new_dist;
+            //     queue.emplace(nx, ny);
+            // }
+
+            // Step cost: straight = res, diagonal = res*sqrt(2)
+            const bool diagonal = (dx[i] != 0 && dy[i] != 0);
+            const float step = diagonal ? (resolution_ * std::sqrt(2.0f)) : resolution_;
+
+            const float new_dist = cur_dist + step;
+
+            // If we found a shorter path to obstacle, update and push
             if (new_dist < distances_[nidx]) {
                 distances_[nidx] = new_dist;
                 queue.emplace(nx, ny);

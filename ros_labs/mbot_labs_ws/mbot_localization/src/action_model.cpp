@@ -31,11 +31,21 @@ bool ActionModel::processOdometry(const nav_msgs::msg::Odometry& odom)
 
     // TODO #1: Compute the rotation-translation-rotation motion components
     //          Replace following 0s with the correct expressions
-    double delta_trans = 0;
-    double delta_theta = 0;
-    rot1_ = 0;
-    trans_ = 0;
-    rot2_ = 0;
+    const double delta_trans = std::hypot(dx, dy);
+    const double delta_theta = wrapToPi(theta_curr - theta_prev);
+
+    if (delta_trans < 1e-12) {
+        // essentially pure rotation
+        rot1_  = 0.0;
+        trans_ = 0.0;
+        rot2_  = delta_theta;
+    } else {
+        // direction of translation in world/odom frame
+        const double direction = std::atan2(dy, dx);
+        rot1_  = wrapToPi(direction - theta_prev);
+        trans_ = delta_trans;
+        rot2_  = wrapToPi(theta_curr - theta_prev - rot1_);
+    }
 
     const bool moved =
         (delta_trans >= min_trans_) ||
@@ -44,9 +54,19 @@ bool ActionModel::processOdometry(const nav_msgs::msg::Odometry& odom)
     if (moved) {
         // TODO #2: calcuate standard deviations (alpha-model)
         // Hint: use k1_ and k2_ member variables
-        rot1_std_  = 0;
-        trans_std_ = 0;
-        rot2_std_  = 0;
+        // 用平方和再开方，稳很多，避免线性相加导致噪声过大
+        const double rot1_sq  = rot1_ * rot1_;
+        const double rot2_sq  = rot2_ * rot2_;
+        const double trans_sq = trans_ * trans_;
+
+        rot1_std_  = std::sqrt(std::max(0.0, k1_ * rot1_sq + k2_ * trans_sq));
+        trans_std_ = std::sqrt(std::max(0.0, k1_ * trans_sq + k2_ * (rot1_sq + rot2_sq)));
+        rot2_std_  = std::sqrt(std::max(0.0, k1_ * rot2_sq + k2_ * trans_sq));
+
+        // 防止 std 为 0 导致采样退化成常数（可选但很安全）
+        rot1_std_  = std::max(rot1_std_,  1e-12);
+        trans_std_ = std::max(trans_std_, 1e-12);
+        rot2_std_  = std::max(rot2_std_,  1e-12);
     }
 
     prev_odom_ = odom;
@@ -63,16 +83,26 @@ geometry_msgs::msg::Pose ActionModel::propagateParticle(const geometry_msgs::msg
     //       double sample = dist(random_gen);
     //       where mean should be the odometry
     // Replace 0s with the correct expressions
-    double sampled_rot1  = 0.0;
-    double sampled_trans = 0.0;
-    double sampled_rot2  = 0.0; 
+    std::normal_distribution<double> rot1_dist(rot1_,  rot1_std_);
+    std::normal_distribution<double> trans_dist(trans_, trans_std_);
+    std::normal_distribution<double> rot2_dist(rot2_,  rot2_std_);
+
+    const double sampled_rot1  = rot1_dist(random_gen);
+    const double sampled_trans = trans_dist(random_gen);
+    const double sampled_rot2  = rot2_dist(random_gen);
 
     // TODO #4: Update particle position and orientation based on sampled motion
     // Replace 0s with the correct expressions
-    geometry_msgs::msg::Pose new_pose;
-    new_pose.position.x = 0;
-    new_pose.position.y = 0;
-    setOrientationFromYaw(new_pose, wrapToPi(0));
+   const double theta = yawFromQuaternion(pose.orientation);
+
+    geometry_msgs::msg::Pose new_pose = pose;
+
+    const double theta1 = theta + sampled_rot1;
+    new_pose.position.x = pose.position.x + sampled_trans * std::cos(theta1);
+    new_pose.position.y = pose.position.y + sampled_trans * std::sin(theta1);
+
+    const double new_yaw = wrapToPi(theta + sampled_rot1 + sampled_rot2);
+    setOrientationFromYaw(new_pose, new_yaw);
 
     return new_pose;
 

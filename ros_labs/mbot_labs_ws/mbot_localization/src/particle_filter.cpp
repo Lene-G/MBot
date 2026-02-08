@@ -48,32 +48,27 @@ geometry_msgs::msg::Pose ParticleFilter::update(const nav_msgs::msg::Odometry&  
 // Systematic resampling: keep high-weight particles, discard low-weight ones
 nav2_msgs::msg::ParticleCloud ParticleFilter::systematicResample() const
 {
-    // TODO #2: Resample the particles
-    // Step 1: Build cumulative distribution of weights
-    const auto& particles = particle_cloud_.particles;
     // build a new particle cload collection to store data after resampling
     nav2_msgs::msg::ParticleCloud resampled;
     // reserve the size first so that vector won't expand every time (save time)
     resampled.particles.reserve(num_particles_);
-
-    // cdf[i] = w_0 + w_1 + ... + w_i
-    // arrage all the particles to certain range of possibility according to weight
-    std::vector<double> cdf;
-    cdf.reserve(num_particles_);
+    if (particle_cloud_.particles.empty()) return resampled;
+    // TODO #2: Resample the particles
+    // Step 1: Build cumulative distribution of weights
+    std::vector<double> cdf(particle_cloud_.particles.size());
     double cum = 0.0;
-    for (const auto& p : particles) {
-        cum += p.weight;
-        cdf.push_back(cum);
+    for (size_t i = 0; i < particle_cloud_.particles.size(); ++i) {
+        cum += particle_cloud_.particles[i].weight;
+        cdf[i] = cum;
     }
 
     // Step 2: Handle edge case (if all particles have zero weight?)
-    // the lidar data donesn't mach with map, arrange the weight to average
-    if (cum <= 0.0 || particles.empty()) {
-        const double w_uniform = (num_particles_ > 0) ? (1.0 / static_cast<double>(num_particles_)) : 0.0;
-        for (size_t i = 0; i < particles.size(); ++i) {
-            nav2_msgs::msg::Particle q = particles[i];
-            q.weight = w_uniform;
-            resampled.particles.push_back(std::move(q));
+    if (!(cum > 0.0) || !std::isfinite(cum)) {
+        const double w = 1.0 / static_cast<double>(num_particles_);
+        for (int i = 0; i < num_particles_; ++i) {
+            nav2_msgs::msg::Particle p = particle_cloud_.particles[i % particle_cloud_.particles.size()];
+            p.weight = w;
+            resampled.particles.push_back(p);
         }
         return resampled;
     }
@@ -81,20 +76,22 @@ nav2_msgs::msg::ParticleCloud ParticleFilter::systematicResample() const
     // Step 3: Normalize to probability [0, 1]
     for (auto& v : cdf) v /= cum;
 
-    // Step 4: Draw N equally-spaced samples and copy particles. 
-    //You may find  std::uniform_real_distribution<double> unif() helpful.
-    const double inv_N = 1.0 / static_cast<double>(num_particles_);
-    double r = 0.5 * inv_N;
+    // Step 4: Draw N equally-spaced samples and copy particles.
+    // You may find std::uniform_real_distribution<double> unif() helpful.
+    std::uniform_real_distribution<double> unif(0.0, 1.0 / static_cast<double>(num_particles_));
+    const double r = unif(random_gen);
+    const double step = 1.0 / static_cast<double>(num_particles_);
 
-    size_t i = 0;
-    for (size_t m = 0; m < num_particles_; ++m) {
-        const double u = r + m * inv_N;
-        while (i + 1 < cdf.size() && u > cdf[i]) ++i;
+    size_t idx = 0;
+    for (int m = 0; m < num_particles_; ++m) {
+        const double u = r + m * step;
+        while (idx + 1 < cdf.size() && u > cdf[idx]) ++idx;
 
-        nav2_msgs::msg::Particle q = particles[i];
-        q.weight = inv_N;
-        resampled.particles.push_back(std::move(q));
-    }   
+        nav2_msgs::msg::Particle p = particle_cloud_.particles[idx];
+        p.weight = 1.0 / static_cast<double>(num_particles_);
+        resampled.particles.push_back(p);
+    }
+
     return resampled;
 }
 
@@ -114,8 +111,8 @@ nav2_msgs::msg::ParticleCloud ParticleFilter::propagate(const nav2_msgs::msg::Pa
 
 // Weight each particle with SensorModel
 nav2_msgs::msg::ParticleCloud ParticleFilter::weightParticles(const nav2_msgs::msg::ParticleCloud& prior,
-                                                                const sensor_msgs::msg::LaserScan& scan,
-                                                                const ObstacleDistanceGrid& dist_grid) const
+                                                              const sensor_msgs::msg::LaserScan& scan,
+                                                              const ObstacleDistanceGrid& dist_grid) const
 {
     nav2_msgs::msg::ParticleCloud posterior = prior;
     double sum_w = 0.0;
@@ -144,12 +141,14 @@ geometry_msgs::msg::Pose ParticleFilter::computeBestEstimate(const nav2_msgs::ms
 
     // TODO #5: Compute the best estimate pose
     // Loop through all p in cloud.particles. Fill in x, y, cos_sum, sin_sum
-
-
-
-
-
-
+    for (const auto& p : cloud.particles) {
+        const double w = p.weight;
+        const double yaw = yawFromQuaternion(p.pose.orientation);
+        x += w * p.pose.position.x;
+        y += w * p.pose.position.y;
+        cos_sum += w * std::cos(yaw);
+        sin_sum += w * std::sin(yaw);
+    }
 
     geometry_msgs::msg::Pose est;
     est.position.x = x;
