@@ -1,0 +1,17 @@
+# ===== ROS / colcon =====
+mbot_ws/build/
+mbot_ws/install/
+mbot_ws/log/
+
+# ===== Firmware build =====
+**/build/
+**/*.o
+**/*.elf
+**/*.bin
+
+# ===== VSCode =====
+.vscode/
+*.code-workspace
+
+# ===== OS =====
+.DS_Store
