@@ -49,8 +49,11 @@ A PID-based controller regulates the robot's linear and angular velocity to foll
 - Generate velocity commands for the differential drive robot
 
 ### Key Files
-<motion_controller.cpp>
-<diff_motion_controller.cpp>
+```tree
+mbot_setpoint/
+    src/
+        motion_controller_diff.cpp
+```
 
 
 ---
@@ -68,12 +71,14 @@ Monte Carlo Localization estimates the robot's pose using a particle filter. The
 5. Estimate robot pose
 
 ### Key Files
+```tree
 mbot_localization/
     src/
-        <particle_filter.cpp>
-        <obstacle_distance_grid.cpp>
-        <action_model.cpp>
-        <sensor_model.cpp>
+        particle_filter.cpp
+        obstacle_distance_grid.cpp
+        action_model.cpp
+        sensor_model.cpp
+```
 
 
 ---
@@ -90,10 +95,12 @@ Each grid cell stores the probability that the space is occupied.
 2. Update cell probabilities using log-odds
 
 ### Key Files
+```tree
 mbot_mapping/
     src/
-        <mapping.cpp>
-        <mapping_node.cpp>
+        mapping.cpp
+        mapping_node.cpp
+```
 
 
 ---
@@ -113,10 +120,12 @@ The planner operates on an obstacle distance grid derived from the occupancy map
 5. Publish waypoints
 
 ### Key Files
+```tree
 mbot_nav/
     src/
         astar.cpp
         frontier_explorer.cpp
+```
 
 ---
 
@@ -145,11 +154,13 @@ A frontier is defined as the boundary between known free space and unknown space
 5. Plan a path using A*
 
 ### Key Files
+```tree
 mbot_nav/
     src/
         frontier_exploration.cpp
         exploration_node.cpp
         navigation_node.cpp
+```
 
 ---
 
